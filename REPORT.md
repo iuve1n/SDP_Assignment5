@@ -6,37 +6,7 @@ This project uses a calculator to demonstrate the Strategy pattern. Addition, su
 
 ## 2. UML class diagram
 
-```mermaid
-classDiagram
-    class Client {
-        +main(String[] args)
-    }
-    class Calculator {
-        -CalculationStrategy strategy
-        +Calculator(CalculationStrategy strategy)
-        +setStrategy(CalculationStrategy strategy) void
-        +calculate(double firstNumber, double secondNumber) double
-    }
-    class CalculationStrategy {
-        <<interface>>
-        +calculate(double firstNumber, double secondNumber) double
-    }
-    class AddStrategy {
-        +calculate(double firstNumber, double secondNumber) double
-    }
-    class SubtractStrategy {
-        +calculate(double firstNumber, double secondNumber) double
-    }
-    class MultiplyStrategy {
-        +calculate(double firstNumber, double secondNumber) double
-    }
-
-    Client --> Calculator
-    Calculator --> CalculationStrategy
-    AddStrategy ..|> CalculationStrategy
-    SubtractStrategy ..|> CalculationStrategy
-    MultiplyStrategy ..|> CalculationStrategy
-```
+![UML diagram](UML.svg)
 
 ## 3. Clean Code principles
 
